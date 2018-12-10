@@ -1,20 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Cats(props) {
-    return (
-        <div>
-            <h1>Cats</h1>
-            <ul>
-                <li>
-                    <Link to="/cats/oakley">Oakley</Link>
-                </li>
-                <li>
-                    <Link to="/cats/milla">Millas</Link>
-                </li>
-            </ul>
-        </div>
-    );
+const Cats = (props) => {
+
+	const catListItems = props.catList.map(catName => {
+	return (
+		<li>
+			<Link to={`/cats/${catName}`}>{catName}</Link>
+		</li>
+	);
+	});
+
+	return (
+	<div>
+		<h1>CAAAAATSSSz!</h1>
+		<ul>
+			{catListItems}
+		</ul>        
+	</div>
+	);
 };
 
 export default Cats;
