@@ -13,6 +13,8 @@ import Home from './Home';
 import About from './About';
 import Cats from './Cats';
 import OneCat from './OneCat';
+import Dogs from './Dogs';
+import OneDog from './OneDog';
 
 class App extends Component {
 	constructor(props) {
@@ -39,6 +41,21 @@ class App extends Component {
 				'Neo': [
 					'the couch'
 				]
+			},
+
+			dogToys: {
+				'Zoey': [
+					'elephant'
+				],
+				'Milly': [
+					'pillow'
+				],
+				'Luna': [
+					'rope'
+				],
+				'Cocoa': [
+					'owl'
+				]
 			}
 		};
 	}
@@ -54,6 +71,12 @@ class App extends Component {
 					}} />          
 					<Route path="/cats/:catName" render={(props) => {
 						return <OneCat toys={this.state.catToys} {...props} />
+					}} />
+					<Route path="/dogs" render={(props) => {
+						return <Dogs dogList={Object.keys(this.state.dogToys)} {...props} />
+					}} />          
+					<Route path="/dogs/:dogName" render={(props) => {
+						return <OneDog toys={this.state.dogToys} {...props} />
 					}} />
 				</div>
 			</Router>

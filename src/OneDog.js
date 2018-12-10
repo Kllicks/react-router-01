@@ -1,13 +1,15 @@
 import React from 'react';
 
-const OneCat = (props) => {
+function OneDog(props) {
+    
     const allToys = props.toys;
-    const catName = props.match.params.catName;
-    const myToys = allToys[catName];
+    const dogName = props.match.params.dogName;
+    const myToys = allToys[dogName];
+    
     return (
         <div>
             <h2>
-                {catName}
+                {props.match.params.dogName}
             </h2>
             <ul>
                 {myToys.map((toy) => {
@@ -18,4 +20,4 @@ const OneCat = (props) => {
     );
 };
 
-export default OneCat;
+export default OneDog;
