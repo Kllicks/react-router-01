@@ -28,8 +28,7 @@ class App extends Component {
 				'Oakley': [
 					'string',
 					'bookmarks',
-					'ice',
-					'daddy\'s face'
+					'ice'
 				],
 				'Milla': [
 					'drool'
